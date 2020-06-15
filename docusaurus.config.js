@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
+  title: 'Brent Ryan',
+  tagline: 'The most interesting content you\'ll ever find on the web',
   url: 'https://brentryan.github.io',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
@@ -8,18 +8,11 @@ module.exports = {
   projectName: 'brentryan.github.io', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'BrentRyan.com Logo',
+        src: 'img/logo.png',
       },
       links: [
-        {
-          to: 'docs/',
-          activeBasePath: 'docs',
-          label: 'Docs',
-          position: 'left',
-        },
         {to: 'blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/brentryan/brentryan.github.io',
@@ -32,24 +25,19 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Style Guide',
-              to: 'docs/',
-            },
-            {
-              label: 'Second Doc',
-              to: 'docs/doc2/',
-            },
-          ],
-        },
-        {
           title: 'Community',
           items: [
             {
               label: 'Twitter',
               href: 'https://twitter.com/tweetbrentryan',
+            },
+            {
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/in/brentryan',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/brentryan',
             },
           ],
         },
@@ -59,11 +47,7 @@ module.exports = {
             {
               label: 'Blog',
               to: 'blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/brentryan/brentryan.github.io',
-            },
+            }
           ],
         },
       ],
@@ -74,14 +58,6 @@ module.exports = {
     [
       '@docusaurus/preset-classic',
       {
-        docs: {
-          // It is recommended to set document id as docs home page (`docs/` path).
-          homePageId: 'doc1',
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/brentryan/brentryan.github.io/edit/master/website/',
-        },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.

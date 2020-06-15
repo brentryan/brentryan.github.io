@@ -8,44 +8,46 @@ import styles from './styles.module.css';
 
 const features = [
   {
-    title: <>Easy to Use</>,
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
+    title: <>Twitter</>,
+    imageUrl: 'img/twitter.svg',
+    link: 'https://twitter.com/tweetbrentryan',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Follow me on Twitter to see about what I'm currently learning to stay current.
       </>
     ),
   },
   {
-    title: <>Focus on What Matters</>,
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
+    title: <>LinkedIn</>,
+    imageUrl: 'img/linkedin.svg',
+    link: 'https://www.linkedin.com/in/brentryan',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Check out my LinkedIn profile to see what I've done.
       </>
     ),
   },
   {
-    title: <>Powered by React</>,
-    imageUrl: 'img/undraw_docusaurus_react.svg',
+    title: <>Github</>,
+    imageUrl: 'img/github.svg',
+    link: 'https://github.com/brentryan',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Most of my code contributions have been behind corporate organizational accounts but I'll tinker here on occasion.
       </>
     ),
   },
 ];
 
-function Feature({imageUrl, title, description}) {
+function Feature({imageUrl, title, description, link}) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
     <div className={classnames('col col--4', styles.feature)}>
       {imgUrl && (
         <div className="text--center">
-          <img className={styles.featureImage} src={imgUrl} alt={title} />
+          <a href={link}>
+            <img className={styles.featureImage} src={imgUrl} alt={title} />
+          </a>
         </div>
       )}
       <h3>{title}</h3>
@@ -65,16 +67,6 @@ function Home() {
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
-          <div className={styles.buttons}>
-            <Link
-              className={classnames(
-                'button button--outline button--secondary button--lg',
-                styles.getStarted,
-              )}
-              to={useBaseUrl('docs/')}>
-              Get Started
-            </Link>
-          </div>
         </div>
       </header>
       <main>
